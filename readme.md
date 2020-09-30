@@ -8,8 +8,8 @@ A markdown loader for WebPack using [remark](https://github.com/remarkjs/remark)
 
 ## Installation instructions
 
-`npm install -D remark remark-obj-loader`
-`yarn add -D remark remark-obj-loader`
+- **npm**: `npm install -D remark remark-obj-loader`
+- **yarn**: `yarn add -D remark remark-obj-loader`
 
 
 ## Options
