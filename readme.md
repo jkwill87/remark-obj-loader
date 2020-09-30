@@ -6,6 +6,12 @@ A markdown loader for WebPack using [remark](https://github.com/remarkjs/remark)
 - **`attrs`**: containing frontmatter attributes
 
 
+## Installation instructions
+
+`npm install -D remark remark-obj-loader`
+`yarn add -D remark remark-obj-loader`
+
+
 ## Options
 
 remark-obj-loader has a single option: **`plugins`**. Any passed [remark plugins](https://github.com/remarkjs/remark/blob/main/doc/plugins.md) will be applied to the markdown body before being converted into html.
