@@ -13,7 +13,11 @@ function loader(content) {
   // register plugins
   const plugins = loaderUtils.getOptions(this).plugins || []
   for (const plugin of plugins) {
-    remark.use(plugin)
+    if (Array.isArray(plugin)) {
+      remark.use(plugin[0], plugin[1])
+    } else {
+      remark.use(plugin)
+    }
   }
   remark.use(RemarkHtmlPlugin)
   // process markdown body
@@ -27,7 +31,7 @@ function loader(content) {
       const attrs = markdown.attributes
       const html = file.contents
       // serialize into an object
-      callback(null, `module.exports = ${JSON.stringify({ attrs, html })}`)
+      callback(null, `module.exports = ${JSON.stringify({attrs, html})}`)
     }
     catch (error) {
       callback(error)
